@@ -66,11 +66,11 @@ cars = cars.drop('make', axis=1)
 
 modelDummies = pd.get_dummies(cars.model)
 # cars = cars.join(modelDummies)
-cars = cars.merge(modelDummies)
+# cars = cars.merge(modelDummies)
 cars = cars.drop('model', axis=1)
 
 fuelDummies = pd.get_dummies(cars.fuel)
-cars = cars.join(fuelDummies)
+# cars = cars.join(fuelDummies)
 cars = cars.drop('fuel', axis=1)
 
 cars = cars[stats.zscore(cars.price) < 3]
